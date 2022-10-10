@@ -137,8 +137,12 @@ function App() {
     const checkVictory = () => {
       const playerWin = scorePlayerValue === SCORE_TO_WIN;
       const computerWin = scoreComputerValue === SCORE_TO_WIN;
-      if (playerWin) return handleOpenModal("playerWin");
-      if (computerWin) return handleOpenModal("computerWin");
+      if (playerWin) {
+        setPlayGame(false)
+        return handleOpenModal("playerWin")};
+      if (computerWin) {
+        setPlayGame(false)
+        return handleOpenModal("computerWin")};
     };
 
     checkVictory();
